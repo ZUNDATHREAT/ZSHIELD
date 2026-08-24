@@ -6,6 +6,17 @@ ZSHIELD is supplied as dedicated hardware with the required software prepared by
 
 > Project status: working prototype. ZSHIELD complements—but does not replace—endpoint protection, software updates, a firewall, and safe browsing practices.\n\n![ZSHIELD customer hardware dashboard](docs/zshield-customer-dashboard.png)\n\n*Customer dashboard example. Displayed figures are an illustrative prototype snapshot and will differ for each appliance.*
 
+### Prototype snapshot shown
+
+The public dashboard example includes:
+
+- 902,283 lifetime DNS queries
+- 234,389 lifetime blocked requests
+- 26.0% lifetime block rate
+- **11,779 malware/phishing-list blocks**
+
+These figures describe the displayed prototype measurement window. They are DNS filtering events and are not a promise of identical results for every customer.
+
 ## Customer setup
 
 Customers begin after receiving a prepared ZSHIELD appliance:
@@ -16,7 +27,7 @@ Customers begin after receiving a prepared ZSHIELD appliance:
 4. Configure the router or customer devices to use ZSHIELD as the DNS server.
 5. Open the ZSHIELD hardware dashboard using the local address supplied with the appliance.
 
-The dashboard is available only from the customer's local network unless a separate secure remote-access option is configured.
+The dashboard is available on the customer's local network. ZSHIELD also supports WireGuard for encrypted remote access when it has been configured by ZundaThreat; the dashboard must not be exposed through ordinary public port forwarding.
 
 Customers do not need to download this repository or run Linux installation commands. GitHub deployment files are intended for ZundaThreat development, manufacturing, repair, and advanced evaluation.
 
@@ -43,6 +54,7 @@ Counts represent DNS events. They are not confirmed cyberattacks, unique people,
 | microSD storage | Operating system and application storage |
 | 5.1 V / 3 A power supply | Stable appliance power |
 | Ethernet or Wi-Fi | Local-router connection |
+| WireGuard | Secure remote access when configured by ZundaThreat |
 | 7-inch DSI display | Optional appliance display |
 | SATA SSD | Planned durable local storage |
 
