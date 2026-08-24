@@ -31,7 +31,7 @@ Customers begin after receiving a prepared ZSHIELD appliance:
 4. Configure the router or customer devices to use ZSHIELD as the DNS server.
 5. Open the ZSHIELD hardware dashboard using the local address supplied with the appliance.
 
-The dashboard is available on the customer's local network. ZSHIELD also supports WireGuard for encrypted remote access when it has been configured by ZundaThreat; the dashboard must not be exposed through ordinary public port forwarding.
+The dashboard is available on the customer's local network. ZSHIELD also supports WireGuard VPN tunnelling when configured by ZundaThreat. Authorized devices can connect through an encrypted tunnel, reach the ZSHIELD appliance, and use its DNS protection while away from the local network. The dashboard must not be exposed through ordinary public port forwarding.
 
 Customers do not need to download this repository or run Linux installation commands. GitHub deployment files are intended for ZundaThreat development, manufacturing, repair, and advanced evaluation.
 
@@ -58,7 +58,7 @@ Counts represent DNS events. They are not confirmed cyberattacks, unique people,
 | microSD storage | Operating system and application storage |
 | 5.1 V / 3 A power supply | Stable appliance power |
 | Ethernet or Wi-Fi | Local-router connection |
-| WireGuard | Secure remote access when configured by ZundaThreat |
+| WireGuard | Encrypted VPN tunnelling for authorized remote connectivity and ZSHIELD DNS protection |
 | 7-inch DSI display | Optional appliance display |
 | SATA SSD | Planned durable local storage |
 
