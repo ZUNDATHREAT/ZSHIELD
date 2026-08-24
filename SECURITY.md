@@ -10,8 +10,6 @@ Include the affected component, concise reproduction steps, and potential impact
 
 ZSHIELD is currently a prototype. No production release is supported.
 
-## Data handling
+## Customer appliance security
 
-This public build does not send telemetry, heartbeat data, analytics, raw DNS logs, device identifiers, or browsing history to ZundaThreat or another remote dashboard.
-
-Dashboard data is generated locally and served to a browser on the same network. Operators should keep port 8080 behind the router/firewall and use strong AdGuard Home and Raspberry Pi credentials.
+The dashboard is intended for the customer's local network. Keep its port behind the router/firewall, use strong Raspberry Pi and AdGuard Home credentials, apply supported security updates, and do not publish private configuration files.
