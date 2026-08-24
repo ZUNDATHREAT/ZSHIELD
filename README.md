@@ -7,12 +7,12 @@ ZSHIELD is supplied as dedicated hardware with the required software prepared by
 > Project status: working prototype. ZSHIELD complements—but does not replace—endpoint protection, software updates, a firewall, and safe browsing practices.
 
 <p align="center">
-  <a href="docs/zshield-customer-dashboard-full.png">
-    <img src="docs/zshield-customer-dashboard-full.png" alt="Full ZSHIELD customer hardware dashboard showing blocked advertising, trackers, analytics, malware and phishing, plus WireGuard VPN tunnel status" width="100%">
+  <a href="docs/zshield-customer-dashboard.webp">
+    <img src="docs/zshield-customer-dashboard.webp" alt="Full ZSHIELD customer hardware dashboard showing blocked advertising, trackers, analytics, malware and phishing, plus WireGuard VPN tunnel status" width="100%">
   </a>
 </p>
 
-[Open the full-size ZSHIELD dashboard image](docs/zshield-customer-dashboard-full.png)
+[Open the full-size ZSHIELD dashboard image](docs/zshield-customer-dashboard.webp)
 
 *Customer dashboard example. Displayed figures are an illustrative prototype snapshot and will differ for each appliance.*
 
