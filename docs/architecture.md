@@ -1,38 +1,28 @@
 # ZSHIELD Architecture
 
-ZSHIELD is a local-first DNS privacy appliance.
+ZSHIELD is a Raspberry Pi-based DNS privacy appliance supplied with its software prepared by ZundaThreat.
 
 ```mermaid
 flowchart TD
-    A[Network devices] -->|DNS requests| B[Raspberry Pi]
-    B --> C[AdGuard Home]
-    C -->|Allowed lookups| D[Chosen upstream DNS]
-    C -->|Local aggregate counters| E[ZSHIELD service]
-    E --> F[Local browser dashboard]
+    A[Network devices] -->|DNS requests| B[ZSHIELD appliance]
+    B --> C[AdGuard Home filtering]
+    C -->|Allowed lookups| D[Selected upstream DNS]
+    C -->|Aggregate counters| E[ZSHIELD dashboard service]
+    E --> F[Customer browser on local network]
 ```
 
 ## Request flow
 
-1. Devices use the Raspberry Pi as their DNS server.
-2. AdGuard Home checks requested domains against locally configured rules and filter lists.
-3. Blocked domains are refused; allowed lookups go to the operator-selected upstream resolver.
-4. The ZSHIELD service reads aggregate counters from `http://127.0.0.1/control/stats`.
-5. A browser on the LAN reads the local ZSHIELD endpoint at `/api/status`.
+1. Customer devices use ZSHIELD as their DNS server.
+2. AdGuard Home checks requested domains against configured rules and filter lists.
+3. Blocked domains are refused; allowed requests go to the selected upstream resolver.
+4. The dashboard service reads AdGuard Home aggregate counters and Raspberry Pi system health.
+5. A browser on the same network reads the customer dashboard.
 
-## No telemetry boundary
+## Dashboard data
 
-This public build has no code path from the ZSHIELD dashboard to a ZundaThreat backend or analytics provider. It does not implement heartbeat messages, remote node registration, cloud history, remote cumulative counters, or background reporting.
-
-The local API response contains only:
-
-- aggregate AdGuard Home counters;
-- hostname and LAN IP;
-- system uptime;
-- CPU temperature;
-- memory and disk utilization.
-
-It does not expose raw queried domains, client names, MAC addresses, or a private-IP inventory.
+The dashboard response contains aggregate filtering counters, hostname, local address, system uptime, CPU temperature, memory utilization, and disk utilization. It does not need raw domain logs to display its summary.
 
 ## Network exposure
 
-The service listens on port 8080 for LAN access. It must not be exposed through public router port forwarding. Future remote access should be delivered through an authenticated private VPN.
+The dashboard listens on its configured local port. It must remain behind the customer's router/firewall and must not be exposed using public port forwarding.
