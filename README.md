@@ -4,7 +4,11 @@
 
 ZSHIELD is supplied as dedicated hardware with the required software prepared by ZundaThreat. It filters DNS requests for a home or small-office network before known advertising, tracking, analytics, malware, and phishing domains can be reached.
 
-> Project status: working prototype. ZSHIELD complements—but does not replace—endpoint protection, software updates, a firewall, and safe browsing practices.\n\n![ZSHIELD customer hardware dashboard](docs/zshield-customer-dashboard.png)\n\n*Customer dashboard example. Displayed figures are an illustrative prototype snapshot and will differ for each appliance.*
+> Project status: working prototype. ZSHIELD complements—but does not replace—endpoint protection, software updates, a firewall, and safe browsing practices.
+
+![ZSHIELD customer hardware dashboard](docs/zshield-customer-dashboard.png)
+
+*Customer dashboard example. Displayed figures are an illustrative prototype snapshot and will differ for each appliance.*
 
 ### Prototype snapshot shown
 
