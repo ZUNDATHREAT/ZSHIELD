@@ -78,6 +78,34 @@ Counts represent DNS events. They are not confirmed cyberattacks, unique people,
 
 See [docs/architecture.md](docs/architecture.md).
 
+## RF-aware edge security research direction
+
+ZSHIELD is also being used as a platform for continued research into local-first cyber-physical security. This research asks whether selected network, radio-frequency (RF), electromagnetic-spectrum, and physical-sensor observations can eventually be processed and correlated at the edge without sending every observation to a centralized cloud service.
+
+Research and planned prototype development include:
+
+- Software-defined radio (SDR) fundamentals, RF spectrum visualization, and lawful signal observation
+- Electromagnetic-spectrum awareness, RF interference, and anomaly-awareness concepts
+- Signal detection and characterization, including modulation and protocol-analysis fundamentals
+- Integration of SDR-derived metadata and physical/wireless sensor events with Raspberry Pi edge-computing systems
+- Network-security monitoring and IDS/IPS experimentation, including evaluation of Suricata and packet-analysis workflows
+- Local edge-AI experimentation for event correlation, anomaly classification, and human-readable security explanations
+- Multilingual local security explanations, with English, Turkish, and Swahili as development targets
+- Raspberry Pi 5 with AI acceleration as an intermediate research platform
+- Compute Module 5 (CM5) custom-PCB research for future integrated edge hardware
+
+These items are **research and development directions**, not capabilities of the current ZSHIELD DNS-filtering prototype unless a feature is separately documented as implemented and tested.
+
+### Relationship to signal-intelligence concepts
+
+The research includes study of technical concepts that also appear in signal-analysis and intelligence disciplines, including RF environments, electronic emissions, signal characterization, SIGINT, COMINT, and ELINT terminology. ZSHIELD is **not represented as a military SIGINT, COMINT, or ELINT collection system**. The project focuses on lawful civilian RF/spectrum awareness, local cyber-physical security research, and edge processing.
+
+### Research publication
+
+This direction is discussed in the FrontierIQ analysis **“When Cybersecurity Leaves the Network: The Rise of RF-Aware Edge Security”**, which examines how network telemetry, software-defined radio, physical sensors, and local AI may converge in future edge-security architectures:
+
+https://frontieriq.ca/article/when-cybersecurity-leaves-the-network-rf-aware-edge-security
+
 ## ZundaThreat deployment
 
 These commands are for preparing or repairing a ZSHIELD appliance—not normal customer onboarding:
